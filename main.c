@@ -1,6 +1,6 @@
 #include "raylib.h"
 
-#define Cell_Size 	24
+#define Cell_Size 	50	
 #define Grid_Width 	10
 #define Grid_Height	20
 
