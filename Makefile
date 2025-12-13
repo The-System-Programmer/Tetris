@@ -7,4 +7,4 @@ run : tetris
 	./tetris
 
 clean :
-	rm -f tetruis *.o
+	rm -f tetris 

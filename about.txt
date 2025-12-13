@@ -1,0 +1,10 @@
+Phase 1 : Window + Grid
+Phase 2 : Grid as data
+Phase 3 : One falling block
+Phase 4 : Gravity
+Phase 5 : Stop at the floor
+Phase 6 : Lock block into grid
+Phase 7 : Horizontal input
+Phase 8 : Replace block with square
+Phase 9 : Central collision function
+Phase 10: Line clearing
