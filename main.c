@@ -4,6 +4,11 @@
 #define Grid_Width 	10
 #define Grid_Height	20
 
+static int grid[Grid_Height][Grid_Width] = {0};
+
+int blockX = 5;
+int blockY = 0;
+
 int main()
 {
 	InitWindow(Grid_Width * Cell_Size , Grid_Height * Cell_Size,"Phase 1");
@@ -21,6 +26,7 @@ int main()
 					DrawRectangleLines(x*Cell_Size,y*Cell_Size,Cell_Size,Cell_Size,DARKGRAY);
 				}
 			}
+			DrawRectangle(blockX*Cell_Size,blockY*Cell_Size,Cell_Size,Cell_Size,ORANGE);
 			EndDrawing();
 	}
 	CloseWindow();
