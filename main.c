@@ -9,6 +9,7 @@ static int grid[Grid_Height][Grid_Width] = {0};
 int blockX = 5;
 int blockY = 0;
 
+float fallTimer = 0.0f;
 int main()
 {
 	InitWindow(Grid_Width * Cell_Size , Grid_Height * Cell_Size,"Phase 1");
@@ -16,6 +17,13 @@ int main()
 
 	while (!WindowShouldClose())
 	{
+		fallTimer += GetFrameTime();
+		if (fallTimer >= 0.5f)
+		{
+			fallTimer = 0.0f;
+			blockY++;
+		}
+
 		BeginDrawing();
 			ClearBackground(BLACK);
 
