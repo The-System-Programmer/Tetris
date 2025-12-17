@@ -17,3 +17,17 @@ Shapes = [
     [[[1,0,0],[1,1,1]], [[1,1],[1,0],[1,0]], [[1,1,1],[0,0,1]], [[0,1],[0,1],[1,1]]],   # J
     [[[0,0,1],[1,1,1]], [[1,0],[1,0],[1,1]], [[1,1,1],[1,0,0]], [[1,1],[0,1],[0,1]]]    # L
 ]
+
+# -- Helpers --
+def new_piece():
+    i = random.randrange(len(Shapes))
+    return
+    {
+            'shape': Shapes[i],
+            'rot' : 0,
+            'x' : Cols // 2-2,
+            'y' : 0,
+    }
+
+def collide(board,piece,dx = 0 , dy = 0 , drot = )):
+    shape = piece['shape'][(piece)['rot']+dront)%len(piece['shape'])]
