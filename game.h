@@ -1,11 +1,11 @@
 #ifndef GAME_H
 #define GAME_H
 
-#define WIDTH 10
-#define HEIGHT 20
+#include "config.h"
 
 extern int field[HEIGHT][WIDTH];
-extern int curPiece, px, py;
+extern int curPiece;
+extern int px, py;
 
 int check_collision(int nx, int ny);
 void lock_piece(void);

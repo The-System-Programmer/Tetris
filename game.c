@@ -29,12 +29,15 @@ void clear_lines(void) {
         int full = 1;
         for (int x = 0; x < WIDTH; x++)
             if (!field[y][x]) full = 0;
+
         if (full) {
             for (int yy = y; yy > 0; yy--)
                 for (int x = 0; x < WIDTH; x++)
-                    field[yy][x] = field[yy-1][x];
+                    field[yy][x] = field[yy - 1][x];
+
             for (int x = 0; x < WIDTH; x++)
                 field[0][x] = 0;
+
             y++;
         }
     }
