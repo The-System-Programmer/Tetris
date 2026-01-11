@@ -5,6 +5,7 @@
 
 extern int field[HEIGHT][WIDTH];
 extern int curPiece;
+extern int curRotation;
 extern int px, py;
 
 int check_collision(int nx, int ny);
