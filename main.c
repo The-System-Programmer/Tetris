@@ -7,7 +7,8 @@
 #include "game.h"
 #include "render.h"
 
-int main(void) {
+int main(void)
+{
     srand(time(NULL));
 
     initscr();
@@ -26,9 +27,14 @@ int main(void) {
         if (ch == KEY_RIGHT && !check_collision(px + 1, py)) px++;
         if (ch == KEY_DOWN  && !check_collision(px, py + 1)) py++;
 
-        if (tick++ > 20) {
-            if (!check_collision(px, py + 1)) py++;
-            else {
+        if (tick++ > 20)
+        {
+            if (!check_collision(px, py + 1))
+            {
+                py++;
+            }
+            else
+            {
                 lock_piece();
                 clear_lines();
                 spawn_piece();

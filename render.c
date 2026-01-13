@@ -16,25 +16,22 @@ void draw(void)
     clear();
 
     /* Draw field */
-    for (int y = 0; y < HEIGHT; y++) {
-        for (int x = 0; x < WIDTH; x++) {
-            mvprintw(
-                offset_y + y,
-                offset_x + x * 2,
-                field[y][x] ? "[]" : " ."
-            );
+    for (int y = 0; y < HEIGHT; y++)
+    {
+        for (int x = 0; x < WIDTH; x++)
+        {
+            mvprintw(offset_y + y,offset_x + x * 2,field[y][x] ? "[]" : " .");
         }
     }
 
     /* Draw current piece */
-    for (int y = 0; y < 4; y++) {
-        for (int x = 0; x < 4; x++) {
-            if (pieces[curPiece][curRotation][y][x]) {
-                mvprintw(
-                    offset_y + py + y,
-                    offset_x + (px + x) * 2,
-                         "[]"
-                );
+    for (int y = 0; y < 4; y++)
+    {
+        for (int x = 0; x < 4; x++)
+        {
+            if (pieces[curPiece][curRotation][y][x])
+            {
+                mvprintw(offset_y + py + y,offset_x + (px + x) * 2,"[]");
             }
         }
     }
